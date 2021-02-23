@@ -68,6 +68,7 @@ body {
 .header__burger {
    display: none;
    z-index: 3;
+   cursor: pointer;
 }
 
 .header__logo {
@@ -130,6 +131,17 @@ body {
 
    .header__burger {
       display: block;
+   }
+   .header__burger .close {
+      display: none;
+   }
+
+   .header__burger.active .close{
+      display: block;
+   }
+
+   .header__burger.active .burger{
+      display: none;
    }
 
    .header__menu {
@@ -220,8 +232,32 @@ body {
    .col-md-4 {
       width: calc((100% / 12 * 4) - 22px);
    }
+
+   .col-md-8 {
+      width: calc((100% / 12 * 8) - 22px);
+   }
+
 }
 
+@media (max-width:767px) {
+   
+   /* .card {
+      display: flex;
+   }
+   .card__image {
+      flex: 0 0 106px;
+      border: 1px solid red;
+      margin-right: 8px;
+   }
+   
+   
+   .card__tag,
+   .bullet,
+   .card__text,
+   .card__more {
+      display: none;
+   } */
+}
 .w-100 {
    width: 100%;
 }
@@ -237,6 +273,9 @@ body {
    padding-bottom: 32px;
 }
 
+.top-slider {
+   margin-bottom: 22px;
+}
 
 .hero {
    position: relative;
@@ -267,6 +306,7 @@ body {
    padding-bottom: 60px;
 }
 
+
 .hero__month {
    display: inline-block;
    align-self: flex-start;
@@ -296,6 +336,17 @@ body {
    line-height: 30px;
    font-weight: 600;
    color: #ffffff;
+}
+
+@media (max-width:767px) {
+   .hero__body {
+      max-width: 100%;
+   }
+   .hero__title {
+      font-size: 18px;
+      line-height: 22px;
+      
+   }
 }
 
 .title {
@@ -377,6 +428,7 @@ body {
 
 .search-tags {
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
    margin-bottom: 26px;
 }
@@ -385,9 +437,12 @@ body {
    font-weight: 500;
    font-size: 14px;
    color: #A8A8A8;
+   white-space: nowrap;
+   margin-right: 10px;
 }
 .search-tags__list {
    display: flex;
+   flex-wrap: wrap;
 }
 
 .search-tags__link {
@@ -396,7 +451,7 @@ body {
    font-weight: 600;
    color: #466CAE;
    text-transform: uppercase;
-   margin-left: 10px;
+   margin-right: 10px;
 }
 
 

@@ -16,7 +16,8 @@
       <div class="header__wrapper">
          <div class="header__body">
             <div class="header__burger">
-               <img src="img/svg/burger-menu-ico.svg" width="24" height="24" alt="burger">
+               <img class="burger" src="img/svg/burger-menu-ico.svg" width="24" height="24" alt="burger">
+               <img class="close" src="img/svg/close-menu-ico.svg" width="24" height="24" alt="burger">
             </div>
             <a href="/" class="header__logo">
                <img src="img/main-logo.svg" alt="Logo" width="142" height="43">
@@ -181,15 +182,14 @@
       <section>
          <div class="container">
             <form class="row mb-2">
-               <div class="col-8">
+               <div class="col-md-8 col-12 mb-2">
                   <input class="f-control" type="text" name="search" placeholder='Введите слово или тег,например, "Недвижимость"'>
                </div>
-               <div class="col-4">
+               <div class="col-md-4 col-12">
                   <button class="btn btn-primary w-100">Найти</button>
-               </div>
-               
-               
+               </div> 
             </form>
+
             <div class="search-tags">
                <p class="search-tags__desc">Популярные теги:</p>
                <ul class="search-tags__list">
@@ -259,7 +259,7 @@
                   </div>
                </div>
    
-               <div class="col-4">
+               <div class="col-md-4 col-12">
                   <div class="card">
                      <div class="card__image">
                         <img src="img/cards/card-02.jpg" alt="Img-02">
@@ -304,7 +304,7 @@
    
                </div>
    
-               <div class="col-4">
+               <div class="col-md-4 col-12">
                   <div class="card">
                      <div class="card__image">
                         <img src="img/cards/card-03.jpg" alt="Img-03">
@@ -411,6 +411,24 @@
    </main>
    
    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script>
+      new Swiper('.top-slider', {
+
+         pagination: {
+            el: 'swiper-pagination',
+            // Буллеты
+            clickable: true
+         },
+
+         // Бесконечный слайдер
+         loop: true,
+
+         // Автопрокрутка
+         autoplay: {
+            delay: 3000
+         }
+      });
+   </script>
    <script src="js/script.js"></script>
 </body>
 </html>
