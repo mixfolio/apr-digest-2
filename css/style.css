@@ -712,3 +712,28 @@ body {
 .red{
    height: 403px;
 }
+
+.article-left {
+   width: calc((100% / 12 * 9) - 22px);
+   margin-left: 11px;
+   margin-right: 11px;
+}
+
+.article-right {
+   width: calc((100% / 12 * 3) - 22px);
+   margin-left: 11px;
+   margin-right: 11px;
+}
+
+@media (max-width:768px) {
+   .article-left {
+      width: 100%;
+   }
+   .article-right {
+      display: none;
+   }
+   .article__title {
+      font-size: 18px;
+      line-height: 27px;
+   }
+}
