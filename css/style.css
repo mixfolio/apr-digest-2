@@ -279,6 +279,12 @@ body {
    /* padding: 0 27px; */
 }
 
+.top-slider__image {
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+}
+
 .hero {
    position: relative;
 }
@@ -289,6 +295,8 @@ body {
    height: 100%;
    padding: 0 27px;
 }
+
+
 
 .hero__overlay {
    position: absolute;
@@ -341,6 +349,10 @@ body {
 }
 
 @media (max-width:767px) {
+   .top-slider__image img {
+      height: 360px;
+   }
+
    .hero__body {
       max-width: 100%;
    }
